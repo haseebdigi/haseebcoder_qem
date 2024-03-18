@@ -69,27 +69,157 @@
         <!-- Swiper-->
         <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="4859" data-simulate-touch="true" data-direction="vertical" data-nav="false">
           <div class="swiper-wrapper text-center">
-            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x742.jpg">
+
+
+
+            <style>
+              .swiper-slide {
+                position: relative;
+                overflow: hidden; /* Ensure no overflow from the video */
+              }
+
+              .swiper-slide-video {
+                width: 100vw; /* Set video width to cover the viewport width */
+                height: 100vh; /* Set video height to cover the viewport height */
+                object-fit: cover; /* Cover the container without losing aspect ratio */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* Center the video */
+                z-index: -1; /* Ensure video stays behind content */
+              }
+
+              @media (max-width: 768px) { /* Adjust this breakpoint as needed */
+                .swiper-slide-video {
+                  width: 100%; /* Adjust width for mobile */
+                  height: auto; /* Adjust height for mobile */
+                  top: 0;
+                  left: 0;
+                  transform: none; /* Remove transform for mobile */
+                }
+              }
+
+              .swiper-slide, .swiper-slide-video {
+                margin: 0;
+                padding: 0;
+                
+              }
+
+
+
+              .swiper-slide {
+                position: relative;
+                overflow: hidden;
+              }
+
+              .swiper-slide-video {
+                width: 100%;
+                height: auto;
+                min-height: 100%; /* Ensure minimum height to cover slide */
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+              }
+
+              @media (max-width: 768px) {
+                .swiper-slide-video {
+                  /* Adjustments for mobile screens can be fine-tuned here */
+                }
+              }
+
+
+
+
+              .swiper-slide {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end; /* Aligns children to the bottom */
+              align-items: flex-end; /* Aligns children to the right */
+              position: relative;
+              height: 100%; /* Ensure it fills the parent height */
+            }
+
+            .swiper-slide-caption {
+              /* Remove previous absolute positioning styles */
+              margin-bottom: 20px; /* Adjust distance from the bottom */
+              text-align: right;
+            }
+
+
+
+
+            .button-small {
+            padding: 5px 10px; /* Smaller padding */
+            font-size: 12px; /* Smaller font size */
+            line-height: 1.5; /* Adjust line-height for text alignment */
+            width: auto; /* Allows the button width to fit its content */
+            min-width: 100px; /* Adjust this value as needed to make the button narrower */
+          }
+
+
+          @media (max-width: 480px) {
+          .button-small {
+            width: 60px; /* Even smaller width for small devices */
+            padding: 5px; /* Adjust padding to fit */
+            font-size: 10px; /* Adjust font size for smaller screens */
+          }
+        }
+
+
+
+
+
+
+              
+
+
+
+
+            </style>
+            
+
+
+            <div class="swiper-slide">
+              <video class="swiper-slide-video" autoplay loop muted playsinline>
+                <source src="Videos/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
               <div class="swiper-slide-caption section-md">
                 <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0" style="color:beige">Innovate. Integrate. Elevate.</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100" style="color: rgb(210, 215, 219);">Crafting Tomorrow's Tech Landscape, Today</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                 
+                  <a class="button button-primary button-ujarak button-small" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-4-1770x742.jpg">
+            
+
+
+
+
+            <div class="swiper-slide">
+              <video class="swiper-slide-video" autoplay loop muted playsinline>
+                <source src="Videos/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
               <div class="swiper-slide-caption section-md">
                 <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0" style="color:beige">Your Vision, Our Innovation</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100" style="color: rgb(210, 215, 219);">Customized Tech Solutions Redefining Your Digital Experience</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                  <a class="button button-primary button-ujarak button-small" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-6-1770x742.jpg">
+            <div class="swiper-slide">
+              <video class="swiper-slide-video" autoplay loop muted playsinline>
+                <source src="Videos/3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
               <div class="swiper-slide-caption section-md">
                 <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0" style="color:beige">Digital Prowess Unleashed</h1>
-                  <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100" style="color: rgb(210, 215, 219);">Seamless Solutions for Your Tech Voyage</p><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+                  <a class="button button-primary button-ujarak button-small" href="#modalCta" data-toggle="modal" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+
                 </div>
               </div>
             </div>
@@ -881,179 +1011,7 @@
 
     <!-- Second Pricing Packages -->
 
-    <section class="section section-sm section-bottom-70 section-fluid bg-default">
-      <div class="container">
-        <h2>AI & API IMPLEMENTATION</h2>
-        <div class="row row-30 justify-content-center">
-          <div class="col-md-6 col-lg-5 col-xl-4">
-            <div class="box-pricing box-pricing-black">
-              <div class="box-pricing-body">
-                <h5 class="box-pricing-title">Basic Package<br>(Entry Level)</h5>
-                <!-- <h3 class="box-pricing-price">$500.00</h3> -->
-                <!-- <div class="box-pricing-time">Monthly Price <br> <br>(Entry Level)</div> -->
-                <div class="box-pricing-divider">
-                  <div class="divider"></div><span>Basic</span>
-                </div>
-                <ul class="box-pricing-list">
-                  <li class="active">Yoast SEO (WordPress plugin)</li>
-                  <li class="active">Google Search Console API</li>
-                  <li class="active">WordPress (with plugins like Elementor or Gutenberg)</li>
-                  <li class="active">WordPress REST API</li>
-                  <li class="active">Hootsuite, Buffer</li>
-                  <li class="active">Facebook Graph API, Twitter API, Instagram Graph API</li>
-                  <li class="active">Mailchimp, Mautic</li>
-                  <li class="active">Mailchimp API, Mautic API</li>
-                  <div>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                  </div>
-                  
-
-                </ul>
-              </div>
-              <div class="box-pricing-button"><a class="button button-lg button-block button-gray-4" href="#">Get started</a></div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5 col-xl-4">
-            <div class="box-pricing box-pricing-black box-pricing-popular">
-              <div class="box-pricing-body">
-                <h5 class="box-pricing-title">Standard Package<br>(Full Online Presence)</h5>
-                <!-- <h3 class="box-pricing-price">$1000.00</h3> -->
-                <!-- <div class="box-pricing-time">Monthly Price <br><br>(Full Online Presence)</div> -->
-                <div class="box-pricing-divider">
-                  <div class="divider"></div><span>STANDARD</span>
-                </div>
-                <ul class="box-pricing-list">
-                  <li class="active">Google Ads, Bing Ads</li>
-                  <li class="active">Google Ads API, Bing Ads API</li>
-                  <li class="active">WordPress, Joomla, Drupal, Ai</li>
-                  <li class="active">WordPress REST API, Joomla Platform API, Drupal API</li>
-                  
-                  <div>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-
-
-                  </div>
-                  
-                </ul>
-              </div>
-              <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="#">Get started</a></div>
-              <div class="box-pricing-badge">popular</div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-5 col-xl-4">
-            <div class="box-pricing box-pricing-black">
-              <div class="box-pricing-body">
-                <h5 class="box-pricing-title">Advanced Package<br>(Growth & Conversion)</h5>
-                <!-- <h3 class="box-pricing-price">$1500.00</h3> -->
-                <!-- <div class="box-pricing-time">Monthly Price <br><br>(Growth & Conversion)</div> -->
-                <div class="box-pricing-divider">
-                  <div class="divider"></div><span>Advanced</span>
-                </div>
-                <ul class="box-pricing-list">
-                  <li class="active">Google Analytics, Matomo (formerly Piwik)</li>
-                  <li class="active">Google Analytics Reporting API, Matomo API</li>
-                  <li class="active">Mautic, HubSpot (free version)</li>
-                  <li class="active">Mautic API, HubSpot API</li>
-                  <li class="active">Google Ads (remarketing feature)</li>
-                  <li class="active">Google Ads API</li>
-                  <div>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-
-                  </div>
-
-
-                </ul>
-              </div>
-              <div class="box-pricing-button"><a class="button button-lg button-block button-gray-4" href="#">Get started</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-6 col-xl-6  mt-3">
-          <div class="box-pricing box-pricing-black box-pricing-popular">
-            <div class="box-pricing-body">
-              <h5 class="box-pricing-title">Specialized Package<br>(Specific Focus)</h5>
-              <!-- <h3 class="box-pricing-price">$1200.00</h3> -->
-              <!-- <div class="box-pricing-time">Monthly Price <br><br>(Specific Focus)</div> -->
-              <div class="box-pricing-divider">
-                <div class="divider"></div><span>Specialized</span>
-              </div>
-              <ul class="box-pricing-list">
-                <li class="active">Influencity, Heepsy</li>
-                <li class="active">Influencity API, Heepsy API</li>
-                <li class="active">ShareASale, Affiliatly</li>
-                <li class="active">ShareASale API, Affiliatly API</li>
-
-                <div>
-                  <li>&nbsp;</li>
-                  <li>&nbsp;</li>
-                  <li>&nbsp;</li>
-                  <li>&nbsp;</li>
-                </div>
-                
-              </ul>
-            </div>
-            <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="#">Get started</a></div>
-            <div class="box-pricing-badge">popular</div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-6 mt-4">
-          <div class="box-pricing box-pricing-black box-pricing-popular">
-            <div class="box-pricing-body">
-              <h5 class="box-pricing-title">Premium Package<br>(Full Experience)</h5>
-              <!-- <h3 class="box-pricing-price">$2500.00</h3> -->
-              <!-- <div class="box-pricing-time">Monthly Price <br><br>(Full Experience)</div> -->
-              <div class="box-pricing-divider">
-                <div class="divider"></div><span>Premium</span>
-              </div>
-              <ul class="box-pricing-list">
-                <li class="active">Google Trends, SEMrush, Ahrefs</li>
-                <li class="active">Google Trends API, SEMrush API, Ahrefs API</li>
-                <li class="active">Google Optimize, Optimizely</li>
-                <li class="active">Google Optimize API, Optimizely API</li>
-                <div>
-                  <li>&nbsp;</li>
-                </div>
-
-                <div>
-
-                </div>
-                
-              </ul>
-            </div>
-            <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="#">Get started</a></div>
-            <div class="box-pricing-badge">popular</div>
-          </div>
-        </div>
-      </div>
-  </div>
-
-
+    
 
 
 
